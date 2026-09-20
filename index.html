@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+=====================================================================
+  CGR Joinery & Construction Ltd - SITE (model "blueprint")
+  IMPORTANT: inainte sa-l pui pe Netlify, redenumeste fisierul in index.html
+
+  DEJA COMPLETAT:
+    - numele firmei, telefonul 07787 932710, WhatsApp, pagina de Instagram
+    - logo-ul (desenat direct in fisier, nu ai nevoie de poza logo.png)
+
+  MAI ARE NEVOIE (Find & Replace, Ctrl+H, in tot fisierul):
+    TOWN                 ->  orasul lui (apare de mai multe ori)
+    Nearby town 1-5      ->  zonele in care lucreaza
+    numefirma.co.uk      ->  domeniul cumparat (apare la canonical si og:url)
+    Replace this with a real customer review   ->  cele 3 recenzii de exemplu, inlocuite cu unele reale
+    Customer name        ->  numele clientilor din recenzii
+
+  POZE (folderul "poze", langa index.html, toate optionale):
+    poze/proiect-1.jpg   pana la   poze/proiect-6.jpg   (lucrari)
+    poze/og.jpg          1200x630, poza cand linkul se trimite pe WhatsApp / Facebook
+  Comprima pozele (sub 500 KB fiecare). Cat timp lipsesc, apar locuri goale marcate.
+
+  Textele sunt in engleza, pentru clienti din UK.
+=====================================================================
+-->
+
+<title>CGR Joinery &amp; Construction Ltd | Joinery, builders and home renovations in TOWN</title>
+<meta name="description" content="CGR Joinery &amp; Construction Ltd: joinery, extensions, loft conversions, kitchens, bathrooms and full home renovations in TOWN and surrounding areas. Free quotes. Call 07787 932710.">
+<link rel="canonical" href="https://numefirma.co.uk/">
+<meta name="theme-color" content="#0A2A4D">
+<meta property="og:title" content="CGR Joinery &amp; Construction Ltd | Joinery, builders and home renovations in TOWN">
+<meta property="og:description" content="Extensions, loft conversions, kitchens, bathrooms and full renovations. Free quotes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://numefirma.co.uk/">
+<!-- Optional: poze/og.jpg (1200x630) apare cand linkul e trimis pe Facebook/WhatsApp -->
+<meta property="og:image" content="https://numefirma.co.uk/poze/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120.00 120.00' role='img' aria-label='CGR Joinery and Construction Ltd'%3E%3Crect width='120' height='120' rx='22' fill='%230A2A4D'/%3E%3Cg transform='translate(16.80 31.49) scale(0.8640)' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 58H98' stroke='%23FFFFFF' stroke-width='6.250000000000001'/%3E%3Cpath d='M8 58L50 10L92 58' stroke='%23FFFFFF' stroke-width='6.250000000000001'/%3E%3Cpath d='M50 10V58' stroke='%23FF6A1F' stroke-width='7.19'/%3E%3Ccircle cx='50' cy='10' r='7.870370370370371' fill='%23FF6A1F' stroke='none'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bp: #12406F;
+    --bp-deep: #0A2A4D;
+    --ink: #0E1C2B;
+    --paper: #F5F7F9;
+    --white: #FFFFFF;
+    --chalk: #E6EEF6;
+    --steel: #566574;
+    --line: #D5DCE3;
+    --orange: #FF6A1F;
+    --orange-hover: #FF7F3D;
+    --orange-soft: #FF9560;
+    --display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-text-size-adjust: 100%;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+  .wrap { width: min(1160px, 100% - 40px); margin-inline: auto; }
+
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; margin: 0; line-height: .95; letter-spacing: .005em; text-transform: uppercase; }
+  h2 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
+  h3 { font-size: 1.6rem; line-height: 1.05; }
+  p { margin: 0 0 1em; max-width: 60ch; }
+
+  /* Blueprint paper: fine and coarse grid */
+  .bp {
+    background-color: var(--bp);
+    background-image:
+      linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,.13) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.13) 1px, transparent 1px);
+    background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
+    color: var(--white);
+  }
+  .bp-deep { background-color: var(--bp-deep); background-image: none; color: var(--white); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 54px; padding: 0 28px;
+    font: 600 1.0625rem/1 var(--body);
+    text-decoration: none;
+    border: 2px solid transparent; border-radius: 3px; cursor: pointer;
+  }
+  .btn-primary { background: var(--orange); color: var(--ink); }
+  .btn-primary:hover { background: var(--orange-hover); }
+  .btn-ghost { border-color: rgba(255,255,255,.6); color: var(--white); }
+  .btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+  .btn-dark { background: var(--bp-deep); color: var(--white); width: 100%; }
+  .btn-dark:hover { background: var(--bp); }
+
+  /* ---------- Header ---------- */
+  .site-header { position: sticky; top: 0; z-index: 20; background: var(--bp-deep); color: var(--white); border-bottom: 1px solid rgba(255,255,255,.14); }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .brand { display: inline-flex; align-items: center; min-width: 0; max-width: 100%; text-decoration: none; line-height: 0; }
+  .brand .logo { display: block; height: 54px; max-width: 100%; }
+  /* Logo-ul se micsoreaza singur daca ecranul e ingust, ca sa se vada mereu numele complet */
+  .brand .logo svg { display: block; height: 100%; width: auto; max-width: 100%; }
+  .site-nav { display: none; gap: 26px; }
+  .site-nav a { text-decoration: none; font-weight: 500; opacity: .85; }
+  .site-nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--orange); }
+  .header-call { display: none; min-height: 44px; padding: 0 18px; font-size: 1rem; white-space: nowrap; }
+  @media (min-width: 720px) { .header-call { display: inline-flex; } }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 28px 0 0; overflow: hidden; }
+  .hero-grid { display: grid; gap: 20px; align-items: center; }
+  .hero h1 { font-size: clamp(2.7rem, 9vw, 5.4rem); line-height: .92; font-weight: 900; position: relative; z-index: 2; }
+  .hero .lede { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--chalk); margin: 16px 0 22px; max-width: 46ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .drawing { width: 100%; max-width: 340px; margin-inline: auto; }
+  .drawing svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .drawing text { font-family: var(--mono); font-size: 13px; fill: var(--chalk); }
+  .ln { fill: none; stroke: var(--white); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .ln-thin { fill: none; stroke: var(--chalk); stroke-width: 1.2; stroke-linecap: round; opacity: .8; }
+  .ln-new { fill: none; stroke: var(--orange); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* The one orchestrated moment: the house draws itself, the extension last */
+  .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.2s cubic-bezier(.55,.1,.25,1) forwards; animation-delay: var(--d, 0s); }
+  .fade { opacity: 0; animation: fadein .6s ease forwards; animation-delay: var(--d, 0s); }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fadein { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw { animation: none; stroke-dashoffset: 0; }
+    .fade { animation: none; opacity: 1; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* Title block, like the corner of a real drawing: doubles as contact details */
+  .titleblock {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid var(--white);
+    background: rgba(10,42,77,.75);
+  }
+  .titleblock > div { padding: 10px 16px; border-top: 1px solid rgba(255,255,255,.45); }
+  .titleblock > div:first-child { border-top: 0; }
+  .titleblock span { display: block; font-size: .85rem; color: var(--chalk); opacity: .8; }
+  .titleblock b { font-family: var(--display); font-size: 1.3rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+  .titleblock a.tel { font-family: var(--display); font-weight: 900; font-size: clamp(1.8rem, 4.5vw, 2.3rem); color: var(--orange-soft); text-decoration: none; line-height: 1.05; letter-spacing: .03em; }
+
+  /* ---------- Trust strip ---------- */
+  .trust { background: var(--white); border-bottom: 1px solid var(--line); }
+  .trust ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; }
+  .trust li { padding: 16px 0; border-top: 1px solid var(--line); font-weight: 600; }
+  .trust li:first-child { border-top: 0; }
+  .trust span { display: block; font-weight: 400; color: var(--steel); font-size: .95rem; }
+
+  section { padding: 72px 0; }
+  .section-head { margin-bottom: 36px; }
+  .section-head p { color: var(--steel); margin: 16px 0 0; }
+  .bp .section-head p, .bp-deep .section-head p { color: var(--chalk); }
+
+  /* ---------- Services ---------- */
+  .svc-list { list-style: none; margin: 0; padding: 0; border-top: 3px solid var(--ink); }
+  .svc-list li { display: grid; gap: 4px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .svc-list h3 { font-size: clamp(1.9rem, 6vw, 3.8rem); line-height: .95; overflow-wrap: anywhere; }
+  .svc-list p { margin: 0; color: var(--steel); align-self: center; }
+  .svc-list li:hover h3 { color: var(--bp); }
+
+  /* ---------- Projects ---------- */
+  .work .section-head { max-width: 640px; }
+  .proj-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(140px, 38vw, 220px); }
+  .proj:first-child { grid-column: 1 / -1; grid-row: span 2; }
+  .proj:last-child { grid-column: 1 / -1; }
+  .proj { margin: 0; }
+  .proj button {
+    position: relative; display: block; width: 100%; height: 100%;
+    padding: 0; border: 0; overflow: hidden; cursor: zoom-in;
+    background: repeating-linear-gradient(135deg, #1D5A96 0 14px, #2366A8 14px 28px);
+  }
+  .proj button::before {
+    content: attr(data-file);
+    position: absolute; inset: 0; display: grid; place-items: center; padding: 8px; text-align: center;
+    font-family: var(--mono); font-size: .8rem; color: rgba(255,255,255,.7);
+  }
+  .proj img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+  .proj button:hover img { transform: scale(1.04); }
+  .proj .cap {
+    position: absolute; left: 0; bottom: 0; max-width: 100%;
+    background: var(--ink); color: var(--white);
+    font-weight: 600; font-size: .9rem; padding: 5px 12px; text-align: left;
+  }
+  .proj button:focus-visible { outline-offset: -3px; }
+
+  /* Enlarged photo */
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: min(96vw, 1100px); max-height: 94vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(6,16,28,.88); }
+  .lightbox img { display: block; max-width: 100%; max-height: 82vh; margin-inline: auto; }
+  .lightbox p { margin: 10px 0 0; color: var(--white); text-align: center; max-width: none; }
+  .lb-close {
+    position: absolute; top: -48px; right: 0;
+    width: 44px; height: 44px; border: 0; border-radius: 50%;
+    background: var(--white); color: var(--ink); font-size: 1.6rem; line-height: 1; cursor: pointer;
+  }
+
+  .ig-link { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; margin-top: 40px; }
+  .ig-link svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+  /* ---------- Process (a real sequence, so numbered) ---------- */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+  .steps li { position: relative; padding: 0 0 32px 64px; counter-increment: step; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 44px; height: 44px;
+    display: grid; place-items: center;
+    background: var(--bp-deep); color: var(--white);
+    font-family: var(--display); font-weight: 800; font-size: 1.5rem;
+  }
+  .steps li::after { content: ""; position: absolute; left: 21px; top: 50px; bottom: 6px; width: 2px; background: var(--line); }
+  .steps li:last-child::after { display: none; }
+  .steps p { color: var(--steel); margin: 6px 0 0; }
+
+  /* ---------- Areas ---------- */
+  .areas { background: var(--white); }
+  .areas-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 28px; }
+  .areas-list li { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(2rem, 5.5vw, 3.6rem); line-height: 1.05; color: var(--bp-deep); }
+  .areas-list li:first-child { color: var(--orange); }
+  .areas .note { color: var(--steel); margin-top: 24px; }
+
+  /* ---------- Reviews ---------- */
+  .review-list { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; -webkit-overflow-scrolling: touch; }
+  blockquote { margin: 0; flex: 0 0 min(86%, 420px); scroll-snap-align: start; padding: 28px 24px; border: 1px solid rgba(255,255,255,.35); background: rgba(10,42,77,.55); }
+  blockquote::before { content: "\201C"; display: block; font-family: var(--display); font-weight: 900; font-size: 4.5rem; line-height: .6; color: var(--orange-soft); margin-bottom: 12px; }
+  blockquote p { font-size: 1.1rem; margin-bottom: 14px; }
+  blockquote footer { color: var(--chalk); font-size: .95rem; }
+
+  /* ---------- Contact ---------- */
+  .contact-tiles { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  .tile {
+    display: flex; flex-direction: column; justify-content: center; gap: 4px;
+    min-height: 116px; padding: 22px 26px;
+    text-decoration: none; border-radius: 3px;
+    border: 2px solid var(--bp-deep);
+  }
+  .tile-name { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(2rem, 3.6vw, 3.2rem); line-height: 1; letter-spacing: .02em; }
+  .tile-sub { font-size: 1rem; }
+  .tile-wa { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+  .tile-wa:hover { background: var(--orange-hover); border-color: var(--orange-hover); }
+  .tile-ig { background: var(--bp-deep); color: var(--white); }
+  .tile-ig:hover { background: var(--bp); border-color: var(--bp); }
+  .tile-call { background: transparent; color: var(--ink); }
+  .tile-call .tile-name { white-space: nowrap; font-size: clamp(1.8rem, 3.1vw, 2.6rem); }
+  .tile-call:hover { background: var(--white); }
+
+  /* ---------- Footer ---------- */
+  .site-footer { background: var(--ink); color: #A9B7C4; padding: 32px 0 100px; font-size: .95rem; }
+  .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+  .site-footer a { color: var(--white); }
+
+  /* ---------- Mobile call bar ---------- */
+  .callbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--bp-deep);
+    box-shadow: 0 -2px 12px rgba(0,0,0,.3);
+  }
+  .callbar a { display: flex; align-items: center; justify-content: center; min-height: 56px; font-weight: 600; text-decoration: none; }
+  .callbar .call { background: var(--orange); color: var(--ink); }
+  .callbar .wa { color: var(--white); }
+
+  /* ---------- Larger screens ---------- */
+  @media (min-width: 720px) {
+    .trust ul { grid-template-columns: repeat(3, 1fr); }
+    .trust li { border-top: 0; border-left: 1px solid var(--line); padding: 22px 24px; }
+    .trust li:first-child { border-left: 0; padding-left: 0; }
+    .svc-list li { grid-template-columns: 1.2fr 1fr; gap: 32px; padding: 26px 0; }
+    .proj-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; grid-auto-rows: 220px; }
+    .proj:first-child { grid-column: span 2; grid-row: span 2; }
+    .proj:last-child { grid-column: auto; }
+    .titleblock { grid-template-columns: 1.1fr 1.4fr 1.2fr; }
+    .titleblock > div { border-top: 0; border-left: 1px solid rgba(255,255,255,.45); }
+    .titleblock > div:first-child { border-left: 0; }
+    .steps { grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .steps li { padding: 64px 0 0 0; }
+    .steps li::after { left: 54px; right: -28px; top: 21px; bottom: auto; width: auto; height: 2px; }
+    .contact-tiles { grid-template-columns: 1fr 1fr; gap: 18px; }
+    .tile-call { grid-column: 1 / -1; }
+    .callbar { display: none; }
+    .site-footer { padding-bottom: 32px; }
+    section { padding: 104px 0; }
+  }
+  @media (min-width: 720px) {
+    /* the steps line must not run past the last step */
+    .steps li:last-child::after { display: none; }
+  }
+  @media (min-width: 1000px) and (max-width: 1239px) { .site-nav .nav-extra { display: none; } }
+  @media (min-width: 1000px) {
+    .site-nav { display: flex; }
+    .contact-tiles { grid-template-columns: repeat(3, 1fr); }
+    .tile-call { grid-column: auto; }
+    .hero { padding-top: 40px; }
+    .hero-grid { grid-template-columns: 1.3fr 1fr; gap: 0; }
+    .drawing { max-width: 500px; margin-left: -30px; }
+    .review-list { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; }
+    blockquote { flex: none; }
+  }
+</style>
+
+<!-- Date structurate pentru Google (local business) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "CGR Joinery & Construction Ltd",
+  "url": "https://numefirma.co.uk/",
+  "telephone": "+447787932710",
+  "areaServed": "TOWN",
+  "sameAs": ["https://www.instagram.com/cgrjoineryandconstruction"]
+}
+</script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="CGR Joinery &amp; Construction Ltd, inapoi sus">
+      <!-- Logo cu numele complet, desenat direct in pagina (se micsoreaza singur pe telefon) -->
+      <span class="logo"><svg viewBox="0 0 374.60 56.00" aria-hidden="true" focusable="false"><g transform="translate(5.00 -0.11) scale(0.8519)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 58H98" stroke="#FFFFFF" stroke-width="3.1695652173913045"/><path d="M8 58L50 10L92 58" stroke="#FFFFFF" stroke-width="3.1695652173913045"/><path d="M50 34L29 58M50 34L71 58" stroke="#FFFFFF" stroke-width="2.38"/><path d="M50 10V58" stroke="#FF6A1F" stroke-width="3.65"/><circle cx="50" cy="10" r="4" fill="#FF6A1F" stroke="none"/></g><path d="M130.1851851851852 15.1 H111.28518518518518 V40.9 H130.1851851851852" fill="none" stroke="#FFFFFF" stroke-width="6.2" stroke-linejoin="round"/><path d="M158.1851851851852 15.1 H139.28518518518518 V40.9 H155.0851851851852 V28.64 H147.1851851851852" fill="none" stroke="#FFFFFF" stroke-width="6.2" stroke-linejoin="round"/><defs><clipPath id="rc8"><rect x="162.1851851851852" y="10.0" width="28" height="34"/></clipPath></defs><g clip-path="url(#rc8)" fill="none" stroke="#FFFFFF" stroke-width="6.2"><path d="M167.28518518518518 46.0 V15.1 H183.0851851851852 V28.64 H167.28518518518518" stroke-linejoin="round"/><path d="M172.54518518518518 28.64 L185.6851851851852 50.2"/></g><path d="M200.19 16.00V40.00" stroke="#FF6A1F" stroke-width="1.6" stroke-linecap="round"/><path d="M217.6809978182583 24.933427963094392Q216.21996162237468 24.933427963094392 215.4360723391951 24.299645138396023Q214.65218305601556 23.665862313697655 214.3919985279815 22.251525904897086L216.34671818731437 21.964655784244144Q216.4668033540993 22.691838183108587 216.79370186368058 23.04208658623137Q217.12060037326185 23.39233498935415 217.69434061456772 23.39233498935415Q218.28142365218307 23.39233498935415 218.58497226822283 22.99872249822569Q218.88852088426256 22.60511000709723 218.88852088426256 21.871256210078066V16.94109297374024H217.01385800278632V15.399999999999997H220.84991194175012V21.82455642299503Q220.84991194175012 23.292264017033354 220.01598717241018 24.112845990063875Q219.1820624030702 24.933427963094392 217.6809978182583 24.933427963094392Z M232.8377047025734 20.05663591199432Q232.8377047025734 21.524343506032643 232.2572930631128 22.63846699787083Q231.6768814236522 23.75259048970901 230.59611492258762 24.3430092264017Q229.51534842152302 24.933427963094392 228.07432642010357 24.933427963094392Q225.85942223273665 24.933427963094392 224.601863680572 23.6291696238467Q223.34430512840734 22.324911284599004 223.34430512840734 20.05663591199432Q223.34430512840734 17.795031937544355 224.59852798149464 16.52746628814762Q225.85275083458194 15.259900638750885 228.08766921641302 15.259900638750885Q230.3225875982441 15.259900638750885 231.58014615040875 16.54080908445706Q232.8377047025734 17.821717530163234 232.8377047025734 20.05663591199432ZM230.8296138580028 20.05663591199432Q230.8296138580028 18.53555713271824 230.10910285729307 17.671611071682044Q229.38859185658336 16.807665010645845 228.08766921641302 16.807665010645845Q226.76673238177852 16.807665010645845 226.0462213810688 17.66493967352732Q225.32571038035908 18.522214336408798 225.32571038035908 20.05663591199432Q225.32571038035908 21.60440028388928 226.06289987645562 22.495031937544354Q226.80008937255212 23.385663591199428 228.07432642010357 23.385663591199428Q229.39526325473807 23.385663591199428 230.11243855637042 22.518381831085875Q230.8296138580028 21.65110007097232 230.8296138580028 20.05663591199432Z M235.3254264910759 24.799999999999997V15.399999999999997H237.29348894671818V24.799999999999997Z M245.84551165786087 24.799999999999997 241.749273190863 17.561533002129167Q241.86935835764794 18.615613910574872 241.86935835764794 19.25606813342796V24.799999999999997H240.12145204111138V15.399999999999997H242.3697132192519L246.52599426964227 22.698509581263306Q246.40590910285732 21.691128459900636 246.40590910285732 20.8638750887154V15.399999999999997H248.15381541939385V24.799999999999997Z M250.98844991194176 24.799999999999997V15.399999999999997H258.38035906737116V16.92107877927608H252.95651236758405V19.28275372604684H257.9734037799332V20.803832505322923H252.95651236758405V23.278921220723916H258.65388639171465V24.799999999999997Z M267.55949320505744 24.799999999999997 265.3779460084641 21.23080198722498H263.0696422469311V24.799999999999997H261.1015797912888V15.399999999999997H265.79824409221146Q267.4794364272008 15.399999999999997 268.3934179743974 16.12384669978708Q269.307399521594 16.847693399574162 269.307399521594 18.201987224982254Q269.307399521594 19.189354151880764 268.74700207659754 19.906529453513127Q268.1866046316011 20.62370475514549 267.23259469547617 20.85053229240596L269.77439739242436 24.799999999999997ZM267.32599426964225 18.28204400283889Q267.32599426964225 16.9277501774308 265.59143074941517 16.9277501774308H263.0696422469311V19.70305180979418H265.6448019346529Q266.4720553058381 19.70305180979418 266.8990247877402 19.329453513129877Q267.32599426964225 18.955855216465576 267.32599426964225 18.28204400283889Z M276.59852798149467 20.943931866572033V24.799999999999997H274.63713692400705V20.943931866572033L271.2880950503378 15.399999999999997H273.34955708014616L275.60448965644144 19.376153300212913L277.88610782535557 15.399999999999997H279.9475698551639Z  M286.56417737822994 22.23151171043293Q286.56417737822994 21.330872959545776 287.1045606287622 20.62704045422285Q287.64494387929454 19.923207948899925 288.8191099545252 19.376153300212913Q288.3254264910759 18.375443577004965 288.3254264910759 17.51483321504613Q288.3254264910759 16.474095102909864 288.97922351023846 15.910361958836052Q289.633020529401 15.34662881476224 290.8405435954053 15.34662881476224Q291.96133848539813 15.34662881476224 292.6117998054833 15.880340667139812Q293.2622611255685 16.414052519517384 293.2622611255685 17.32803406671398Q293.2622611255685 17.841731724627394 293.0020765975344 18.255358410220012Q292.74189206950035 18.66898509581263 292.2648871014379 19.02256919801277Q291.78788213337543 19.376153300212913 290.6470730489184 19.909865152590488Q291.30754146623565 21.077359829666428 292.27489419867 22.151454932576293Q292.9687196067608 21.097374024130588 293.3289751071157 19.729737402413058L294.7232973214521 20.196735273243434Q294.26964224693114 21.751171043293112 293.4357174775912 22.99872249822569Q294.00945771889707 23.485734563520225 294.6232263491313 23.485734563520225Q295.0568672291881 23.485734563520225 295.4037799332335 23.37899219304471V24.7332860184528Q295.0368530347239 24.880056777856634 294.5298267749652 24.880056777856634Q293.95608653365935 24.880056777856634 293.3790105932761 24.673243435060325Q292.80193465289284 24.466430092264016 292.32826538390776 24.072817601135554Q291.1941276976054 24.933427963094392 289.799805483269 24.933427963094392Q288.2587125095287 24.933427963094392 287.41144494387936 24.222924059616748Q286.56417737822994 23.512420156139104 286.56417737822994 22.23151171043293ZM291.7678679389113 17.34137686302342Q291.7678679389113 16.961107168204396 291.51435480903194 16.72093683463449Q291.2608416791526 16.480766501064583 290.8272007990958 16.480766501064583Q290.3135031411824 16.480766501064583 290.04331151591623 16.76763662171753Q289.7731198906501 17.05450674237047 289.7731198906501 17.52817601135557Q289.7731198906501 18.10858765081618 290.13337539100496 18.815755855216462Q290.8338721972505 18.51554293825408 291.1374208132903 18.30872959545777Q291.44096942933004 18.10191625266146 291.6044186841207 17.868417317246273Q291.7678679389113 17.634918381831085 291.7678679389113 17.34137686302342ZM291.22081329022427 23.158836053938963Q290.11336119654084 21.924627395315824 289.4061929921405 20.64371894960965Q288.2587125095287 21.184102200141943 288.2587125095287 22.20482611781405Q288.2587125095287 22.865294535131294 288.6923533895855 23.265578424414475Q289.1259942696423 23.665862313697655 289.8731908629709 23.665862313697655Q290.30683174302766 23.665862313697655 290.65708014615046 23.505748757984385Q291.00732854927327 23.34563520227111 291.22081329022427 23.158836053938963Z" fill="#FFFFFF"/><path d="M219.48894671818732 39.18566359119943Q221.27021002549748 39.18566359119943 221.96403543358832 37.39772888573456L223.67858475935125 38.04485450674237Q223.12485871250954 39.405819730305176 222.05409930867702 40.069623846699784Q220.9833399048445 40.733427963094385 219.48894671818732 40.733427963094385Q217.22067134558264 40.733427963094385 215.98312698788214 39.44918381831086Q214.74558263018164 38.16493967352732 214.74558263018164 35.85663591199432Q214.74558263018164 33.5416607523066 215.93976289987646 32.30078069552874Q217.13394316957127 31.059900638750882 219.40221854217597 31.059900638750882Q221.05672528454645 31.059900638750882 222.0974633966827 31.723704755145487Q223.13820150881898 32.38750887154009 223.5584995925663 33.67508871540099L221.8239360723392 34.14875798438608Q221.60377993323345 33.4415897799858 220.959990011303 33.02462739531582Q220.31620008937256 32.607665010645846 219.44224693110428 32.607665010645846Q218.10796730016034 32.607665010645846 217.41747759114685 33.43491838183108Q216.7269878821334 34.26217175301632 216.7269878821334 35.85663591199432Q216.7269878821334 37.47778566359119 217.43749178561103 38.33172462739531Q218.14799568908867 39.18566359119943 219.48894671818732 39.18566359119943Z M235.10598007517808 35.85663591199432Q235.10598007517808 37.32434350603264 234.52556843571747 38.43846699787082Q233.94515679625687 39.552590489709004 232.86439029519227 40.143009226401695Q231.7836237941277 40.733427963094385 230.34260179270825 40.733427963094385Q228.12769760534133 40.733427963094385 226.87013905317667 39.42916962384669Q225.61258050101202 38.124911284599 225.61258050101202 35.85663591199432Q225.61258050101202 33.59503193754435 226.86680335409932 32.32746628814762Q228.12102620718662 31.059900638750882 230.3559445890177 31.059900638750882Q232.59086297084878 31.059900638750882 233.84842152301343 32.34080908445706Q235.10598007517808 33.62171753016323 235.10598007517808 35.85663591199432ZM233.09788923060748 35.85663591199432Q233.09788923060748 34.335557132718236 232.37737822989777 33.47161107168204Q231.65686722918804 32.607665010645846 230.3559445890177 32.607665010645846Q229.0350077543832 32.607665010645846 228.3144967536735 33.46493967352732Q227.59398575296376 34.32221433640879 227.59398575296376 35.85663591199432Q227.59398575296376 37.40440028388928 228.33117524906027 38.29503193754435Q229.0683647451568 39.18566359119943 230.34260179270825 39.18566359119943Q231.66353862734275 39.18566359119943 232.38071392897513 38.31838183108587Q233.09788923060748 37.451100070972316 233.09788923060748 35.85663591199432Z M243.31776148043005 40.599999999999994 239.22152301343218 33.361533002129164Q239.34160818021712 34.41561391057487 239.34160818021712 35.05606813342796V40.599999999999994H237.59370186368056V31.199999999999996H239.8419630418211L243.99824409221145 38.4985095812633Q243.8781589254265 37.49112845990064 243.8781589254265 36.66387508871539V31.199999999999996H245.62606524196303V40.599999999999994Z M256.12613621428386 37.89141234918381Q256.12613621428386 39.272391767210785 255.1020765975344 40.00290986515259Q254.0780169807849 40.733427963094385 252.09661172883315 40.733427963094385Q250.28866282890414 40.733427963094385 249.2612675130773 40.0929737402413Q248.2338721972505 39.45251951738821 247.94033067844282 38.15159687721788L249.84167915253792 37.83804116394606Q250.0351496990248 38.585237757274655 250.59554714402122 38.922143364088Q251.15594458901768 39.25904897090134 252.14998291407093 39.25904897090134Q254.2114449438793 39.25904897090134 254.2114449438793 38.00482611781405Q254.2114449438793 37.60454222853087 253.97461030938675 37.3443577004968Q253.7377756748942 37.084173172462734 253.3074704939148 36.91071682044002Q252.87716531293538 36.73726046841731 251.65629945062167 36.49041873669268Q250.60221854217596 36.24357700496806 250.18859185658334 36.09347054648687Q249.77496517099073 35.94336408800567 249.44139526325472 35.739886444286725Q249.10782535551874 35.53640880056777 248.87432642010356 35.24953867991483Q248.64082748468837 34.962668559261886 248.51073522067134 34.57572746628814Q248.3806429566543 34.1887863733144 248.3806429566543 33.68843151171043Q248.3806429566543 32.414194464158975 249.33798859185657 31.73704755145493Q250.29533422705885 31.059900638750882 252.12329732145204 31.059900638750882Q253.8712036379886 31.059900638750882 254.74849249533423 31.606955287437895Q255.62578135267987 32.15400993612491 255.8792944825592 33.41490418736692L253.9712746103094 33.67508871540099Q253.82450385090556 33.0679914833215 253.37418447546196 32.76110716820439Q252.9238651000184 32.45422285308729 252.0832689325237 32.45422285308729Q250.29533422705885 32.45422285308729 250.29533422705885 33.575017743080195Q250.29533422705885 33.94194464158977 250.48546907446837 34.17544357700496Q250.67560392187787 34.408942512420154 251.04920221854218 34.57239176721079Q251.4228005152065 34.735841022001416 252.56360959966355 34.98268275372604Q253.91790342507164 35.26955287437899 254.5016507636096 35.513058907026256Q255.08539810214756 35.756564939673524 255.42563940803825 36.080127750177425Q255.76588071392896 36.403690560681326 255.9460084641064 36.8540099361249Q256.12613621428386 37.30432931156848 256.12613621428386 37.89141234918381Z M262.8168388402597 32.72107877927608V40.599999999999994H260.8487763846174V32.72107877927608H257.81329022422V31.199999999999996H265.8589963988119V32.72107877927608Z M274.3776621191809 40.599999999999994 272.1961149225876 37.030801987224976H269.8878111610546V40.599999999999994H267.9197487054123V31.199999999999996H272.61641300633494Q274.2976053413243 31.199999999999996 275.21158688852086 31.923846699787077Q276.12556843571747 32.64769339957416 276.12556843571747 34.00198722498225Q276.12556843571747 34.98935415188076 275.565170990721 35.70652945351313Q275.00477354572456 36.423704755145486 274.05076360959964 36.650532292405956L276.59256630654784 40.599999999999994ZM274.1441631837657 34.082044002838884Q274.1441631837657 32.7277501774308 272.40959966353864 32.7277501774308H269.8878111610546V35.50305180979417H272.46297084877637Q273.2902242199616 35.50305180979417 273.71719370186366 35.129453513129874Q274.1441631837657 34.75585521646558 274.1441631837657 34.082044002838884Z M282.6961858949084 40.733427963094385Q280.754809031885 40.733427963094385 279.7240780169808 39.786089425124196Q278.6933470020766 38.838750887154006 278.6933470020766 37.07750177430801V31.199999999999996H280.6614094577189V36.92405961674946Q280.6614094577189 38.038183108587646 281.1917856110191 38.6152590489709Q281.7221617643193 39.192334989354144 282.7495570801462 39.192334989354144Q283.80363798859184 39.192334989354144 284.37070683174306 38.588573456352016Q284.9377756748942 37.98481192334989 284.9377756748942 36.857345635202265V31.199999999999996H286.9058381305365V36.97743080198722Q286.9058381305365 38.76536550745209 285.8017217359304 39.74939673527324Q284.6976053413243 40.733427963094385 282.6961858949084 40.733427963094385Z M294.0435244328786 39.18566359119943Q295.82478774018875 39.18566359119943 296.5186131482796 37.39772888573456L298.23316247404256 38.04485450674237Q297.6794364272008 39.405819730305176 296.60867702336833 40.069623846699784Q295.53791761953585 40.733427963094385 294.0435244328786 40.733427963094385Q291.77524906027395 40.733427963094385 290.5377047025735 39.44918381831086Q289.30016034487295 38.16493967352732 289.30016034487295 35.85663591199432Q289.30016034487295 33.5416607523066 290.49434061456776 32.30078069552874Q291.6885208842626 31.059900638750882 293.9567962568673 31.059900638750882Q295.61130299923775 31.059900638750882 296.65204111137405 31.723704755145487Q297.6927792235103 32.38750887154009 298.11307730725764 33.67508871540099L296.3785137870305 34.14875798438608Q296.15835764792473 33.4415897799858 295.5145677259943 33.02462739531582Q294.8707778040639 32.607665010645846 293.9968246457956 32.607665010645846Q292.6625450148517 32.607665010645846 291.9720553058382 33.43491838183108Q291.2815655968247 34.26217175301632 291.2815655968247 35.85663591199432Q291.2815655968247 37.47778566359119 291.99206950030236 38.33172462739531Q292.70257340378 39.18566359119943 294.0435244328786 39.18566359119943Z M304.7637515443052 32.72107877927608V40.599999999999994H302.79568908866287V32.72107877927608H299.76020292826547V31.199999999999996H307.80590910285736V32.72107877927608Z M309.86666140945783 40.599999999999994V31.199999999999996H311.8347238651001V40.599999999999994Z M323.80250243145923 35.85663591199432Q323.80250243145923 37.32434350603264 323.22209079199865 38.43846699787082Q322.641679152538 39.552590489709004 321.5609126514735 40.143009226401695Q320.48014615040887 40.733427963094385 319.0391241489894 40.733427963094385Q316.8242199616225 40.733427963094385 315.5666614094578 39.42916962384669Q314.30910285729317 38.124911284599 314.30910285729317 35.85663591199432Q314.30910285729317 33.59503193754435 315.56332571038047 32.32746628814762Q316.81754856346777 31.059900638750882 319.0524669452988 31.059900638750882Q321.2873853271299 31.059900638750882 322.5449438792946 32.34080908445706Q323.80250243145923 33.62171753016323 323.80250243145923 35.85663591199432ZM321.7944115868886 35.85663591199432Q321.7944115868886 34.335557132718236 321.07390058617887 33.47161107168204Q320.3533895854692 32.607665010645846 319.0524669452988 32.607665010645846Q317.7315301106644 32.607665010645846 317.01101910995465 33.46493967352732Q316.2905081092449 34.32221433640879 316.2905081092449 35.85663591199432Q316.2905081092449 37.40440028388928 317.0276976053415 38.29503193754435Q317.764887101438 39.18566359119943 319.0391241489894 39.18566359119943Q320.3600609836239 39.18566359119943 321.0772362852563 38.31838183108587Q321.7944115868886 37.451100070972316 321.7944115868886 35.85663591199432Z M332.01428383671123 40.599999999999994 327.91804536971335 33.361533002129164Q328.03813053649833 34.41561391057487 328.03813053649833 35.05606813342796V40.599999999999994H326.2902242199618V31.199999999999996H328.5384853981023L332.6947664484926 38.4985095812633Q332.5746812817077 37.49112845990064 332.5746812817077 36.66387508871539V31.199999999999996H334.32258759824424V40.599999999999994Z  M341.95324764082767 40.599999999999994V31.199999999999996H343.92131009646994V39.07892122072391H348.964887101438V40.599999999999994Z M355.5421759587837 32.72107877927608V40.599999999999994H353.57411350314135V32.72107877927608H350.53862734274395V31.199999999999996H358.58433351733584V32.72107877927608Z M369.0243619062641 35.82995031937544Q369.0243619062641 37.28431511710433 368.4539573640356 38.36841731724627Q367.8835528218071 39.45251951738821 366.83947901059344 40.0262597586941Q365.7954051993798 40.599999999999994 364.44778277212646 40.599999999999994H360.64508582393626V31.199999999999996H364.0474988828433Q366.42251662592344 31.199999999999996 367.7234392660938 32.39751596877217Q369.0243619062641 33.59503193754435 369.0243619062641 35.82995031937544ZM367.0429566543124 35.82995031937544Q367.0429566543124 34.315542938254076 366.2557316720555 33.518310858765076Q365.4685066897986 32.72107877927608 364.0074704939149 32.72107877927608H362.6131482795785V39.07892122072391H364.28099781825847Q365.5485634676552 39.07892122072391 366.29576006098375 38.204968062455634Q367.0429566543124 37.33101490418736 367.0429566543124 35.82995031937544Z" fill="#FFFFFF"/></svg></span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Projects</a>
+      <a href="#process">How it works</a>
+      <a class="nav-extra" href="#areas">Areas</a>
+      <a class="nav-extra" href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary header-call" href="tel:07787932710">Call 07787 932710</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero bp">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>We turn plans into rooms</h1>
+          <p class="lede">Joinery, extensions, kitchens, bathrooms and full home renovations in TOWN and the surrounding area. Free quotes, fully insured.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get a free quote</a>
+            <a class="btn btn-ghost" href="https://wa.me/447787932710">WhatsApp us</a>
+          </div>
+        </div>
+
+        <!-- Desenul se traseaza singur la incarcarea paginii; extensia (portocaliu) apare ultima -->
+        <div class="drawing">
+          <svg viewBox="0 0 640 420" role="img" aria-label="Line drawing of a house with a new extension being added">
+            <!-- ground -->
+            <line class="ln draw" pathLength="1" x1="30" y1="360" x2="610" y2="360" style="--d:0s"/>
+            <!-- main house -->
+            <path class="ln draw" pathLength="1" d="M110 360V170H430V360" style="--d:.3s"/>
+            <path class="ln draw" pathLength="1" d="M85 176L270 70L455 176" style="--d:.8s"/>
+            <path class="ln draw" pathLength="1" d="M345 113V78H378V131" style="--d:1.3s"/>
+            <!-- door -->
+            <rect class="ln draw" pathLength="1" x="245" y="272" width="50" height="88" style="--d:1.5s"/>
+            <circle class="ln draw" pathLength="1" cx="284" cy="318" r="2.5" style="--d:1.8s"/>
+            <!-- ground floor windows -->
+            <rect class="ln draw" pathLength="1" x="140" y="270" width="72" height="62" style="--d:1.6s"/>
+            <path class="ln-thin draw" pathLength="1" d="M176 270V332M140 301H212" style="--d:1.9s"/>
+            <rect class="ln draw" pathLength="1" x="328" y="270" width="72" height="62" style="--d:1.7s"/>
+            <path class="ln-thin draw" pathLength="1" d="M364 270V332M328 301H400" style="--d:2s"/>
+            <!-- first floor windows -->
+            <rect class="ln draw" pathLength="1" x="140" y="198" width="72" height="54" style="--d:1.8s"/>
+            <rect class="ln draw" pathLength="1" x="243" y="198" width="54" height="54" style="--d:1.9s"/>
+            <rect class="ln draw" pathLength="1" x="328" y="198" width="72" height="54" style="--d:2s"/>
+
+            <!-- new extension, drawn last, in orange -->
+            <path class="ln-new draw" pathLength="1" d="M430 360V262H575V360" style="--d:2.5s"/>
+            <path class="ln-new draw" pathLength="1" d="M418 262H588" style="--d:3s"/>
+            <rect class="ln-new draw" pathLength="1" x="460" y="286" width="90" height="52" style="--d:3.3s"/>
+            <path class="ln-new draw" pathLength="1" d="M505 286V338" style="--d:3.6s"/>
+            <path class="ln-thin fade" d="M545 262V214" style="--d:3.7s"/>
+            <text class="fade" x="575" y="206" text-anchor="end" style="--d:3.9s">New extension</text>
+
+            <!-- dimensions -->
+            <path class="ln-thin fade" d="M110 384V400M575 384V400M110 392H575" style="--d:4s"/>
+            <text class="fade" x="342" y="386" text-anchor="middle" style="--d:4.2s">9.4 m</text>
+            <path class="ln-thin fade" d="M604 70H620M604 360H620M612 70V360" style="--d:4.1s"/>
+            <text class="fade" transform="translate(600 215) rotate(-90)" text-anchor="middle" style="--d:4.3s">7.2 m</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Title block: contact details, like the corner of a real drawing -->
+      <div class="titleblock">
+        <div><span>Joiners and builders</span><b>CGR Joinery &amp; Construction Ltd</b></div>
+        <div><span>Work</span><b>Joinery, extensions, kitchens, refurbs</b></div>
+        <div><span>Call for a free quote</span><a class="tel" href="tel:07787932710">07787 932710</a></div>
+      </div>
+      <div style="height:28px" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- TRUST STRIP: schimba textele dupa caz -->
+  <div class="trust">
+    <div class="wrap">
+      <ul>
+        <li>Free quotes <span>Written, itemised, no pressure</span></li>
+        <li>Fully insured <span>Public liability cover</span></li>
+        <li>10+ years experience <span>Local, family-run business</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SERVICES: sterge sau adauga <li> dupa ce face el -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we build</h2>
+        <p>From a single room to a whole house. Tell us what you have in mind and we will price it.</p>
+      </div>
+      <ul class="svc-list">
+        <li><h3>Extensions</h3><p>Single and double storey, side and rear extensions.</p></li>
+        <li><h3>Loft conversions</h3><p>Bedrooms, offices and en-suites in the roof space.</p></li>
+        <li><h3>Kitchens</h3><p>Design, fitting, plumbing, electrics and tiling.</p></li>
+        <li><h3>Bathrooms</h3><p>Full refits, wet rooms and shower rooms.</p></li>
+        <li><h3>Full refurbishments</h3><p>Strip-out to finish, including plastering and decorating.</p></li>
+        <li><h3>Roofing</h3><p>Repairs, re-roofs, fascias, soffits and guttering.</p></li>
+        <li><h3>Patios &amp; driveways</h3><p>Block paving, slabs, fencing and garden walls.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS: poze cu lucrari. Numele fisierelor: poze/proiect-1.jpg ... poze/proiect-6.jpg
+       Prima poza (proiect-1) apare mare, deci pune cea mai buna lucrare acolo.
+       Schimba textul din data-caption, din alt="" si din <span class="cap"> pentru fiecare poza. -->
+  <section class="work bp-deep" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Our projects</h2>
+        <p>A selection of recent jobs. Tap a photo to see it larger.</p>
+      </div>
+
+      <div class="proj-grid">
+        <figure class="proj"><button type="button" data-file="poze/proiect-1.jpg" data-caption="Kitchen refit, TOWN"><img src="poze/proiect-1.jpg" alt="Kitchen refit in TOWN" loading="lazy" onerror="this.remove()"><span class="cap">Kitchen refit, TOWN</span></button></figure>
+        <figure class="proj"><button type="button" data-file="poze/proiect-2.jpg" data-caption="Bathroom refit, TOWN"><img src="poze/proiect-2.jpg" alt="Bathroom refit in TOWN" loading="lazy" onerror="this.remove()"><span class="cap">Bathroom refit, TOWN</span></button></figure>
+        <figure class="proj"><button type="button" data-file="poze/proiect-3.jpg" data-caption="Rear extension, TOWN"><img src="poze/proiect-3.jpg" alt="Rear extension in TOWN" loading="lazy" onerror="this.remove()"><span class="cap">Rear extension, TOWN</span></button></figure>
+        <figure class="proj"><button type="button" data-file="poze/proiect-4.jpg" data-caption="Loft conversion, TOWN"><img src="poze/proiect-4.jpg" alt="Loft conversion in TOWN" loading="lazy" onerror="this.remove()"><span class="cap">Loft conversion, TOWN</span></button></figure>
+        <figure class="proj"><button type="button" data-file="poze/proiect-5.jpg" data-caption="Patio and garden wall, TOWN"><img src="poze/proiect-5.jpg" alt="Patio and garden wall in TOWN" loading="lazy" onerror="this.remove()"><span class="cap">Patio and garden wall, TOWN</span></button></figure>
+        <figure class="proj"><button type="button" data-file="poze/proiect-6.jpg" data-caption="Full house refurbishment, TOWN"><img src="poze/proiect-6.jpg" alt="Full house refurbishment in TOWN" loading="lazy" onerror="this.remove()"><span class="cap">Full house refurbishment, TOWN</span></button></figure>
+      </div>
+
+      <a class="ig-link" href="https://www.instagram.com/cgrjoineryandconstruction" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+        See more of our work on Instagram
+      </a>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Project photo">
+    <button class="lb-close" type="button" aria-label="Close">&times;</button>
+    <img alt="">
+    <p></p>
+  </dialog>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How it works</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Site visit and quote</h3><p>We come to you, talk through the job and send a written, itemised quote.</p></li>
+        <li><h3>Plan and start date</h3><p>We agree the scope, the price and a firm start date.</p></li>
+        <li><h3>Build</h3><p>The same team on site from start to finish, with regular updates.</p></li>
+        <li><h3>Handover</h3><p>A final walk-round together, and we do not leave until you are happy.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- AREAS: pune orasele/zonele lui -->
+  <section class="areas" id="areas">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Where we work</h2>
+      </div>
+      <ul class="areas-list">
+        <li>TOWN</li>
+        <li>Nearby town 1</li>
+        <li>Nearby town 2</li>
+        <li>Nearby town 3</li>
+        <li>Nearby town 4</li>
+        <li>Nearby town 5</li>
+      </ul>
+      <p class="note">Based in TOWN and working within about 25 miles. Not on the list? Get in touch anyway.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS: inlocuieste cu recenzii reale (Facebook / Google), cu acordul clientului -->
+  <section class="bp" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What customers say</h2>
+      </div>
+      <div class="review-list">
+        <blockquote>
+          <p>Replace this with a real customer review. Two or three sentences about the job and how it went works best.</p>
+          <footer>Customer name, TOWN</footer>
+        </blockquote>
+        <blockquote>
+          <p>Replace this with a real customer review. Mention the type of work, such as a kitchen, extension or bathroom.</p>
+          <footer>Customer name, TOWN</footer>
+        </blockquote>
+        <blockquote>
+          <p>Replace this with a real customer review. Reviews copied from Facebook or Google are the most convincing.</p>
+          <footer>Customer name, TOWN</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT: WhatsApp, Instagram si telefon (fara formular) -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Get a free quote</h2>
+        <p>Send us a message with a few details and some photos of the job, or give us a call. We usually reply within one working day.</p>
+      </div>
+      <div class="contact-tiles">
+        <a class="tile tile-wa" href="https://wa.me/447787932710">
+          <span class="tile-name">WhatsApp</span>
+          <span class="tile-sub">Send photos and details of the job</span>
+        </a>
+        <a class="tile tile-ig" href="https://www.instagram.com/cgrjoineryandconstruction" target="_blank" rel="noopener">
+          <span class="tile-name">Instagram</span>
+          <span class="tile-sub">Follow us and see more of our work</span>
+        </a>
+        <a class="tile tile-call" href="tel:07787932710">
+          <span class="tile-name">07787 932710</span>
+          <span class="tile-sub">Call us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> CGR Joinery &amp; Construction Ltd. All rights reserved.</span>
+    <span><a href="tel:07787932710">07787 932710</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/cgrjoineryandconstruction" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+
+<!-- Bara fixa jos, doar pe telefon -->
+<div class="callbar">
+  <a class="call" href="tel:07787932710">Call now</a>
+  <a class="wa" href="https://wa.me/447787932710">WhatsApp</a>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Enlarge project photos
+  var lb = document.getElementById("lightbox");
+  document.querySelectorAll(".proj button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var img = btn.querySelector("img");
+      if (!img) return;
+      lb.querySelector("img").src = img.currentSrc || img.src;
+      lb.querySelector("img").alt = img.alt;
+      lb.querySelector("p").textContent = btn.getAttribute("data-caption");
+      lb.showModal();
+    });
+  });
+  lb.addEventListener("click", function (e) {
+    if (e.target === lb || e.target.classList.contains("lb-close")) lb.close();
+  });
+</script>
+</body>
+</html>
